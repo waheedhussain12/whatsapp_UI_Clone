@@ -39,15 +39,16 @@ class WhatsApp extends StatelessWidget {
                       PopupMenuItem(
                         value: 2,
                         child: TextButton(
-                          onPressed: (){
-                            Navigator.push(context,
-                                MaterialPageRoute(builder:
-                                    (context)=> const Settings())
-                            );
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Settings()));
                           },
-                          child:const Text('Settings',style: TextStyle(
-                            color: Colors.black
-                          ),),
+                          child: const Text(
+                            'Settings',
+                            style: TextStyle(color: Colors.black),
+                          ),
                         ),
                       ),
                       const PopupMenuItem(
@@ -62,9 +63,12 @@ class WhatsApp extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            const Text('Camera'),
+            Center(child: const Text('Camera',style: TextStyle(
+              fontSize: 20,color: Colors.grey
+
+            ),)),
             ListView.builder(
-              itemCount: 20,
+              itemCount: 40,
               itemBuilder: (context, index) {
                 return const ListTile(
                   leading: CircleAvatar(
@@ -96,7 +100,7 @@ class WhatsApp extends StatelessWidget {
               },
             ),
             ListView.builder(
-              itemCount: 20,
+              itemCount: 40,
               itemBuilder: (context, index) {
                 return ListTile(
                   leading: const CircleAvatar(
